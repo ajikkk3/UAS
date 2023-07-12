@@ -1,29 +1,17 @@
 public class Denda {
-    private int tarifDenda;
-    private boolean antiDenda;
+    private static final int TARIF_DENDA = 10000;
+    private int tagihan;
 
-    public Denda() {
-        tarifDenda = 10000;
-        antiDenda = false;
-    }
-
-    public void setTarifDenda(int tarif) {
-        tarifDenda = tarif;
-    }
-
-    public int getTarifDenda() {
-        return tarifDenda;
+    public int hitungDenda(int hariTerlambat) {
+        tagihan = TARIF_DENDA * hariTerlambat;
+        return tagihan;
     }
 
     public void addAntiDenda() {
-        antiDenda = true;
+        tagihan = 0;
     }
 
-    public void removeAntiDenda() {
-        antiDenda = false;
-    }
-
-    public boolean getAntiDenda() {
-        return antiDenda;
+    public int getTagihan() {
+        return tagihan;
     }
 }
